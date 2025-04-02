@@ -35,13 +35,13 @@ public class GiveCommand extends BasePointsCommand {
             }
 
             if (this.api.give(player.getFirst(), amount) && silentFlag == null) {
-                // Send message to receiver
-                Player onlinePlayer = Bukkit.getPlayer(player.getFirst());
-                if (onlinePlayer != null) {
-                    this.localeManager.sendCommandMessage(onlinePlayer, "command-give-received", StringPlaceholders.builder("amount", PointsUtils.formatPoints(amount))
-                            .add("currency", this.localeManager.getCurrencyName(amount))
-                            .build());
-                }
+//                // Send message to receiver
+//                Player onlinePlayer = Bukkit.getPlayer(player.getFirst());
+//                if (onlinePlayer != null) {
+//                    this.localeManager.sendCommandMessage(onlinePlayer, "command-give-received", StringPlaceholders.builder("amount", PointsUtils.formatPoints(amount))
+//                            .add("currency", this.localeManager.getCurrencyName(amount))
+//                            .build());
+//                }
 
                 // Send message to sender
                 this.localeManager.sendCommandMessage(sender, "command-give-success", StringPlaceholders.builder("amount", PointsUtils.formatPoints(amount))

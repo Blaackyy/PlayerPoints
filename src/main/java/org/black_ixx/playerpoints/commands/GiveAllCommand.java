@@ -35,11 +35,11 @@ public class GiveAllCommand extends BasePointsCommand {
 
             CommandSender sender = context.getSender();
             if (silentFlag == null) {
-                for (Player player : Bukkit.getOnlinePlayers()) {
-                    this.localeManager.sendCommandMessage(player, "command-give-received", StringPlaceholders.builder("amount", PointsUtils.formatPoints(amount))
-                            .add("currency", this.localeManager.getCurrencyName(amount))
-                            .build());
-                }
+//                for (Player player : Bukkit.getOnlinePlayers()) {
+//                    this.localeManager.sendCommandMessage(player, "command-give-received", StringPlaceholders.builder("amount", PointsUtils.formatPoints(amount))
+//                            .add("currency", this.localeManager.getCurrencyName(amount))
+//                            .build());
+//                }
 
                 this.localeManager.sendCommandMessage(sender, "command-giveall-success", StringPlaceholders.builder("amount", PointsUtils.formatPoints(amount))
                         .add("currency", this.localeManager.getCurrencyName(amount))
